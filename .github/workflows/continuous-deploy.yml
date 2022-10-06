@@ -29,6 +29,7 @@ jobs:
         run: python -m unittest -v test
 
   deploy-to-heroku:
+    needs: build-and-test
     runs-on: ubuntu-latest
 
     steps:
